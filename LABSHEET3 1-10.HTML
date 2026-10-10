@@ -1,0 +1,284 @@
+<!-- QUESTION  1 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<script>
+let a = Number(prompt("Enter first number"));
+let b = Number(prompt("Enter second number"));
+
+let sum = a + b;
+let sub = a - b;
+let mul = a * b;
+let div = a / b;
+
+console.log("Addition =", sum);
+console.log("Subtraction =", sub);
+console.log("Multiplication =", mul);
+console.log("Division =", div);
+
+alert("Addition = " + sum + "\nSubtraction = " + sub +
+      "\nMultiplication = " + mul + "\nDivision = " + div);
+</script>
+</body>
+</html> -->
+
+<!-- QUESTIOM 2-->
+ <!-- <!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="num" placeholder="Enter number">
+<button onclick="checkPrime()">Check</button>
+
+<div id="result"></div>
+
+<script>
+function checkPrime() {
+    let n = Number(document.getElementById("num").value);
+
+    if (n < 2) {
+        result.innerHTML = "Neither Prime nor Composite";
+        return;
+    }
+
+    let prime = true;
+
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    result.innerHTML = prime ? "Prime Number" : "Composite Number";
+}
+</script>
+</body>
+</html> -->
+
+<!-- QUESTIOM 3 -->
+
+ <!-- <!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="marks" placeholder="Marks">
+<button onclick="grade()">Result</button>
+
+<h3 id="output"></h3>
+
+<script>
+function grade() {
+    let m = Number(marks.value);
+    let g;
+
+    if (m >= 90) g = "A";
+    else if (m >= 75) g = "B";
+    else if (m >= 60) g = "C";
+    else if (m >= 40) g = "D";
+    else g = "F";
+
+    let msg;
+
+    switch(g){
+        case "A": msg="Excellent"; break;
+        case "B": msg="Very Good"; break;
+        case "C": msg="Good"; break;
+        case "D": msg="Pass"; break;
+        default: msg="Fail";
+    }
+
+    output.innerHTML = "Grade : " + g + "<br>" + msg;
+}
+</script>
+</body>
+</html> -->
+
+ <!-- QUESTIOM 4 -->
+
+  <!-- <!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="n">
+<button onclick="fib()">Generate</button>
+
+<p id="ans"></p>
+
+<script>
+function fib(){
+let n=Number(document.getElementById("n").value);
+let a=0,b=1,res="";
+
+for(let i=1;i<=n;i++){
+res+=a+" ";
+let c=a+b;
+a=b;
+b=c;
+}
+
+ans.innerHTML=res;
+}
+</script>
+</body>
+</html> -->
+
+  <!-- QUESTIOM 5 --> 
+   
+   <!-- <!DOCTYPE html>
+<html>
+<body>
+<input id="txt">
+<button onclick="check()">Check</button>
+
+<h3 id="out"></h3>
+
+<script>
+function check(){
+let str=txt.value;
+let rev=str.split("").reverse().join("");
+
+out.innerHTML="Reverse : "+rev+"<br>";
+
+if(str===rev)
+out.innerHTML+="Palindrome";
+else
+out.innerHTML+="Not Palindrome";
+}
+</script>
+</body>
+</html> -->
+
+   <!-- QUESTIOM 6 -->
+<!-- 
+    <!DOCTYPE html>
+<html>
+<body>
+<script>
+let arr=[5,2,8,1];
+
+arr.push(10);
+arr.pop();
+
+let square=arr.map(x=>x*x);
+let even=arr.filter(x=>x%2==0);
+arr.sort((a,b)=>a-b);
+
+console.log(arr);
+console.log(square);
+console.log(even);
+</script>
+</body>
+</html> -->
+
+    <!-- QUESTIOM 7 -->
+
+     <!-- <!DOCTYPE html>
+<html>
+<body>
+<h2 id="demo"></h2>
+
+<script>
+let student={
+name:"Pratham",
+roll:101,
+marks:88,
+
+display:function(){
+return `Name : ${this.name}<br>
+Roll : ${this.roll}<br>
+Marks : ${this.marks}`;
+}
+};
+
+demo.innerHTML=student.display();
+</script>
+</body>
+</html> -->
+
+     <!-- QUESTIOM 8 -->
+
+      <!-- <!DOCTYPE html>
+<html>
+<body>
+
+<input type="number" id="a">
+<input type="number" id="b"><br><br>
+
+<button id="add">+</button>
+<button id="sub">-</button>
+<button id="mul">*</button>
+<button id="div">/</button>
+
+<h2 id="res"></h2>
+
+<script>
+function calc(op){
+let x=Number(a.value);
+let y=Number(b.value);
+
+switch(op){
+case "+":res.innerHTML=x+y;break;
+case "-":res.innerHTML=x-y;break;
+case "*":res.innerHTML=x*y;break;
+case "/":res.innerHTML=x/y;
+}
+}
+
+add.addEventListener("click",()=>calc("+"));
+sub.addEventListener("click",()=>calc("-"));
+mul.addEventListener("click",()=>calc("*"));
+div.addEventListener("click",()=>calc("/"));
+</script>
+</body>
+</html> -->
+
+      <!-- QUESTIOM 9 -->
+<!-- 
+       <!DOCTYPE html>
+<html>
+<body>
+
+<input id="text">
+<button onclick="add()">Add</button>
+
+<div id="box"></div>
+
+<script>
+function add(){
+let p=document.createElement("p");
+p.innerText=text.value;
+box.appendChild(p);
+text.value="";
+}
+</script>
+</body>
+</html> -->
+ <!-- QUESTIOM 10 -->
+
+ <!-- <!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return validate()">
+Password
+<input type="password" id="p1"><br><br>
+
+Confirm
+<input type="password" id="p2"><br><br>
+
+<input type="submit">
+</form>
+
+<p id="msg"></p>
+
+<script>
+function validate(){
+if(p1.value!==p2.value){
+msg.innerHTML="Password Not Match";
+return false;
+}
+msg.innerHTML="Password Match";
+return true;
+}
+</script>
+</body>
+</html> -->

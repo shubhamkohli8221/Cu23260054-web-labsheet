@@ -1,0 +1,397 @@
+<!-- QUESTIOM 11 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+<body>
+
+<h2 id="box"
+    onmouseover="changeColor()"
+    onmouseout="resetColor()"
+    style="padding: 30px; background-color: lightblue;">
+    Move your mouse over me
+</h2>
+
+<script>
+function changeColor() {
+    document.getElementById("box").style.backgroundColor = "yellow";
+}
+
+function resetColor() {
+    document.getElementById("box").style.backgroundColor = "lightblue";
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 12 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+</head>
+<body>
+
+<h1>Digital Clock</h1>
+<h2 id="clock"></h2>
+
+<script>
+function showTime() {
+    let now = new Date();
+
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    document.getElementById("clock").innerHTML =
+        hours + ":" + minutes + ":" + seconds;
+}
+
+setInterval(showTime, 1000);
+showTime();
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 13 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Closure Counter</title>
+</head>
+<body>
+
+<h2 id="counter">0</h2>
+
+<button onclick="increase()">Increment</button>
+<button onclick="decrease()">Decrement</button>
+
+<script>
+function createCounter() {
+    let count = 0;
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+
+        decrement: function() {
+            count--;
+            return count;
+        }
+    };
+}
+
+let counter = createCounter();
+
+function increase() {
+    document.getElementById("counter").innerHTML =
+        counter.increment();
+}
+
+function decrease() {
+    document.getElementById("counter").innerHTML =
+        counter.decrement();
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 14 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Exception Handling</title>
+</head>
+<body>
+
+<h2 id="result"></h2>
+
+<script>
+let jsonString = '{"name":"Pratham","age":21}';
+
+try {
+    let data = JSON.parse(jsonString);
+
+    document.getElementById("result").innerHTML =
+        "Name: " + data.name + "<br>Age: " + data.age;
+}
+catch (error) {
+    document.getElementById("result").innerHTML =
+        "Invalid JSON data!";
+}
+finally {
+    console.log("JSON parsing completed.");
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 15 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+</head>
+<body>
+
+<h2 id="result"></h2>
+
+<script>
+const student = {
+    name: "Pratham",
+    age: 21,
+    course: "BCA"
+};
+
+// Destructuring
+const { name, age, course } = student;
+
+// Arrow function
+const displayStudent = () => {
+    return `Name: ${name}<br>Age: ${age}<br>Course: ${course}`;
+};
+
+// Template literal
+document.getElementById("result").innerHTML = displayStudent();
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 16 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+</head>
+<body>
+
+<h2>Image Gallery</h2>
+
+<img id="gallery" src="https://picsum.photos/id/1015/400/250"
+     width="400" height="250">
+
+<br><br>
+
+<button onclick="previousImage()">Previous</button>
+<button onclick="nextImage()">Next</button>
+
+<script>
+let images = [
+    "https://picsum.photos/id/1015/400/250",
+    "https://picsum.photos/id/1016/400/250",
+    "https://picsum.photos/id/1018/400/250",
+    "https://picsum.photos/id/1020/400/250"
+];
+
+let index = 0;
+
+function nextImage() {
+    index++;
+
+    if (index >= images.length) {
+        index = 0;
+    }
+
+    document.getElementById("gallery").src = images[index];
+}
+
+function previousImage() {
+    index--;
+
+    if (index < 0) {
+        index = images.length - 1;
+    }
+
+    document.getElementById("gallery").src = images[index];
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 17 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel Counter</title>
+</head>
+<body>
+
+<textarea id="text" rows="5" cols="40"
+placeholder="Enter a paragraph"></textarea>
+
+<br><br>
+
+<button onclick="countVowels()">Count Vowels</button>
+
+<h3 id="result"></h3>
+
+<script>
+function countVowels() {
+    let text = document.getElementById("text").value;
+
+    let count = 0;
+
+    for (let char of text.toLowerCase()) {
+        if ("aeiou".includes(char)) {
+            count++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Number of vowels: " + count;
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 18 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+
+<h2>Todo List</h2>
+
+<input type="text" id="task" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="todoList"></ul>
+
+<script>
+function addTask() {
+    let task = document.getElementById("task").value;
+
+    if (task == "") {
+        alert("Please enter a task");
+        return;
+    }
+
+    let li = document.createElement("li");
+
+    li.innerHTML = task +
+        ' <button onclick="deleteTask(this)">Delete</button>';
+
+    document.getElementById("todoList").appendChild(li);
+
+    document.getElementById("task").value = "";
+}
+
+function deleteTask(button) {
+    button.parentElement.remove();
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 19 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+</head>
+<body>
+
+<h2>Press any key</h2>
+
+<p id="result">Keyboard information will appear here.</p>
+
+<script>
+document.addEventListener("keydown", function(event) {
+    document.getElementById("result").innerHTML =
+        "Key: " + event.key +
+        "<br>Key Code: " + event.code;
+});
+
+document.addEventListener("keyup", function(event) {
+    console.log("Key released: " + event.key);
+});
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 20 -->
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+</head>
+<body>
+
+<h2>Dynamic Table Generator</h2>
+
+<label>Rows:</label>
+<input type="number" id="rows">
+
+<br><br>
+
+<label>Columns:</label>
+<input type="number" id="columns">
+
+<br><br>
+
+<button onclick="createTable()">Create Table</button>
+
+<div id="tableContainer"></div>
+
+<script>
+function createTable() {
+    let rows = document.getElementById("rows").value;
+    let columns = document.getElementById("columns").value;
+
+    let table = document.createElement("table");
+
+    table.border = "1";
+
+    for (let i = 1; i <= rows; i++) {
+        let row = table.insertRow();
+
+        for (let j = 1; j <= columns; j++) {
+            let cell = row.insertCell();
+
+            cell.innerHTML = "Row " + i + ", Column " + j;
+        }
+    }
+
+    document.getElementById("tableContainer").innerHTML = "";
+    document.getElementById("tableContainer").appendChild(table);
+}
+</script>
+
+</body>
+</html> -->
+<!-- QUESTIOM 21 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+
+<h2 id="result"></h2>
+
+<script>
+function greet(name, callback) {
+    setTimeout(function() {
+        document.getElementById("result").innerHTML =
+            "Hello " + name;
+
+        callback();
+    }, 2000);
+}
+
+function message() {
+    console.log("Callback function executed.");
+}
+
+greet("Pratham", message);
+
+console.log("This message appears first.");
+</script>
+
+</body>
+</html> -->

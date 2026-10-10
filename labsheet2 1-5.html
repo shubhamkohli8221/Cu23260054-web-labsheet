@@ -1,0 +1,348 @@
+<!-- QUESTION 1 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        
+        
+        <div class="radio-group">
+            <label>Gender</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <label>Hobbies</label>
+        <div class="checkbox-group">
+            <input type="checkbox"> Reading
+            <input type="checkbox"> Music
+            <input type="checkbox"> Sports
+        </div>
+
+        <label>City</label>
+        <select>
+            <option>Select City</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Dehradun</option>
+            <option>Jaipur</option>
+        </select>
+
+        <label>Feedback</label>
+        <textarea rows="4" placeholder="Write your feedback"></textarea>
+
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</div>
+
+</body>
+</html> -->
+
+<!-- QUESTION 2 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#e8f0fe;
+        }
+
+        .form-box{
+            width:380px;
+            margin:40px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:darkblue;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input, select{
+            width:100%;
+            padding:8px;
+            margin:6px 0 15px;
+            box-sizing:border-box;
+        }
+
+        input[type=submit]{
+            background:darkblue;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        input[type=submit]:hover{
+            background:navy;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Student Registration</h2>
+
+<form>
+
+<label>Full Name</label>
+<input type="text"
+       required
+       minlength="3"
+       maxlength="30"
+       pattern="[A-Za-z ]+"
+       placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email"
+       required
+       placeholder="abc@gmail.com">
+
+<label>Password</label>
+<input type="password"
+       required
+       minlength="6"
+       maxlength="12"
+       placeholder="6-12 characters">
+
+<label>Mobile Number</label>
+<input type="text"
+       required
+       pattern="[0-9]{10}"
+       placeholder="10 digit number">
+
+<label>Age</label>
+<input type="number"
+       required
+       min="17"
+       max="30">
+
+<label>Course</label>
+<select required>
+    <option value="">--Select Course--</option>
+    <option>BCA</option>
+    <option>BBA</option>
+    <option>B.Tech</option>
+    <option>MCA</option>
+</select>
+
+<input type="submit" value="Register">
+
+</form>
+</div>
+
+</body>
+</html> -->
+
+<!-- QUESTION 3 -->
+
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+    <title>Frameset Layout</title>
+</head>
+
+<frameset rows="20%,80%">
+
+    <frame src='data:text/html,
+    <html><body bgcolor=skyblue>
+    <h1 align=center>MY COLLEGE WEBSITE</h1>
+    </body></html>' noresize>
+
+    <frameset cols="25%,75%">
+
+        <frame src='data:text/html,
+        <html><body bgcolor=lightgray>
+        <h3>Navigation</h3>
+        <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        </ul>
+        </body></html>' noresize>
+
+        <frame src='data:text/html,
+        <html><body>
+        <h2>Welcome</h2>
+        <p>This is the main content frame.</p>
+        </body></html>'>
+
+    </frameset>
+
+</frameset>
+
+</html> -->
+
+<!-- QUESTION 4 -->
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        .header{
+            background:#2196F3;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            display:flex;
+            height:500px;
+        }
+
+        .nav{
+            width:25%;
+            background:#e0e0e0;
+            padding:20px;
+        }
+
+        .nav a{
+            display:block;
+            text-decoration:none;
+            color:black;
+            margin:15px 0;
+        }
+
+        .content{
+            width:75%;
+            background:#f5f5f5;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>My College Website</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="nav">
+            <h3>Navigation</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Welcome</h2>
+            <p>
+                This layout uses CSS Flexbox to create a modern
+                frame-like webpage without using HTML frames.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html> -->
+
+<!-- QUESTION 5 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+
+    <style>
+        body{
+            margin:0;
+            background:#4A90E2;
+            font-family:Arial, sans-serif;
+        }
+
+        .login-box{
+            width:320px;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#4A90E2;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#357ABD;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>User Login</h2>
+
+    <form>
+        <input type="text" placeholder="Username" required>
+
+        <input type="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html> -->

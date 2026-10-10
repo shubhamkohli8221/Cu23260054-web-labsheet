@@ -1,0 +1,222 @@
+<!-- question 11 -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{font-family:Arial;background:#f2f2f2;}
+.box{width:350px;margin:auto;padding:20px;background:white;}
+input{width:100%;padding:8px;margin:8px 0;border:1px solid gray;}
+button{background:green;color:white;padding:10px;border:none;width:100%;}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+<h2 style="color:blue;">Contact Form</h2>
+
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea style="width:100%;height:80px;"></textarea>
+
+<button>Send</button>
+</div>
+
+</body>
+</html> -->
+
+<!-- question 12 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Payment Form</title>
+<style>
+body{font-family:Arial;background:#eee;}
+.box{width:500px;margin:auto;background:white;padding:20px;}
+.row{display:flex;gap:10px;}
+input{width:100%;padding:10px;margin:8px 0;}
+
+@media(max-width:600px){
+.row{
+flex-direction:column;
+}
+}
+button{
+width:100%;
+padding:10px;
+background:#2196F3;
+color:white;
+border:none;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Checkout</h2>
+
+<input placeholder="Card Holder">
+
+<input placeholder="Card Number">
+
+<div class="row">
+<input placeholder="MM/YY">
+<input placeholder="CVV">
+</div>
+
+<button>Pay Now</button>
+
+</div>
+
+</body>
+</html> -->
+
+<!-- quesrtion 13 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+label{
+display:block;
+margin:15px;
+cursor:pointer;
+position:relative;
+padding-left:35px;
+}
+
+input{
+display:none;
+}
+
+.check::before{
+content:"";
+width:18px;
+height:18px;
+border:2px solid black;
+position:absolute;
+left:0;
+top:0;
+}
+
+input:checked ~ .check::after{
+content:"✓";
+position:absolute;
+left:4px;
+top:-2px;
+color:green;
+font-size:18px;
+}
+
+.radio::before{
+content:"";
+width:18px;
+height:18px;
+border:2px solid black;
+border-radius:50%;
+position:absolute;
+left:0;
+top:0;
+}
+
+input:checked ~ .radio::after{
+content:"";
+width:10px;
+height:10px;
+background:blue;
+border-radius:50%;
+position:absolute;
+left:6px;
+top:6px;
+}
+</style>
+</head>
+<body>
+
+<h2>Custom Controls</h2>
+
+<label>
+<input type="checkbox">
+<span class="check">Cricket</span>
+</label>
+
+<label>
+<input type="radio" name="g">
+<span class="radio">Male</span>
+</label>
+
+<label>
+<input type="radio" name="g">
+<span class="radio">Female</span>
+</label>
+
+</body>
+</html> -->
+
+<!-- question 14 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body{font-family:Arial;text-align:center;margin-top:50px;}
+input{width:250px;}
+</style>
+</head>
+<body>
+
+<h2>Volume Control</h2>
+
+<input type="range" id="r" min="0" max="100" value="50"
+oninput="n.value=this.value;u.innerHTML=this.value+' %'">
+
+<br><br>
+
+<input type="number" id="n" value="50" min="0" max="100"
+oninput="r.value=this.value;u.innerHTML=this.value+' %'">
+
+<h3 id="u">50 %</h3>
+
+</body>
+</html> -->
+
+<!-- question 15 -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+}
+
+input{
+width:180px;
+padding:10px;
+border-radius:20px;
+border:2px solid gray;
+transition:0.4s;
+}
+
+input:focus{
+width:320px;
+border-color:blue;
+outline:none;
+}
+</style>
+</head>
+<body>
+
+<h2>Search</h2>
+
+<input type="search" placeholder="Search here...">
+
+</body>
+</html> -->
